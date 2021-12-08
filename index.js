@@ -5,7 +5,7 @@ const metachar = require("metacharacter");
 const mockServer = getLocal();
 
 mockServer.start(process.env.PORT).then(() => {
-    console.log(`Proxy server started with port ${mockServer.port}`);
+    console.log(`Proxy server started with port ${process.env.PORT}`);
     let username = "";
     let isOptifine = false;
     mockServer.anyRequest().thenPassThrough({
